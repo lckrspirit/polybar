@@ -1,0 +1,31 @@
+;=====================================================
+;     File
+;=====================================================
+
+[section/base]
+include-file = $HOME/.config/polybar/master.conf
+include-file = $HOME/.config/polybar/modules.conf
+
+
+;=====================================================
+;     Polybar - arch
+;=====================================================
+
+[bar/bar]
+inherit = bar/master
+
+; $ polybar -m | cut -d ':' -f 1
+; $ xrandr -q | grep " connected" | cut -d ' ' -f1
+; $ xrandr -q | grep " connected primary" | cut -d ' ' -f1
+monitor = 
+monitor-fallback = 
+
+tray-position = right
+tray-padding = 2
+tray-transparent = trueW
+tray-background = #542959
+;tray-scale = 2.0
+
+modules-left   = i3
+modules-center = 
+modules-right  = memory coreuse alsa battery clock 
